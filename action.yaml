@@ -1,0 +1,60 @@
+name: "Upgrade Huawei Cloud CAE Deployment (Image Trigger)"
+description: "Upgrade a component in Huawei Cloud CAE when a new image is pushed to SWR."
+author: 'Emeka Raphael'
+branding:
+  icon: 'refresh-ccw'
+  color: 'green'
+
+inputs:
+  project_id:
+    description: "Project ID"
+    required: true
+  environment_name:
+    description: "Environment Name"
+    required: true
+  app_name:
+    description: "Application Name"
+    required: true
+  component_name:
+    description: "Component Name"
+    required: true
+  version:
+    description: "Version to deploy"
+    required: true
+  accessKey:
+    description: "Access Key"
+    required: true
+  secretKey:
+    description: "Secret Key"
+    required: true
+  region:
+    description: "Huawei Cloud Region"
+    required: true
+  enterprise_project_id:
+    description: "Enterprise Project ID (Optional)."
+    required: true
+  swr_organization:
+    description: "SWR Organization."
+    required: true
+  swr_repository:
+    description: "SWR Repository."
+    required: true
+  image_tag:    
+    description: "image Tag."
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  env:
+    PROJECT_ID: ${{ inputs.project_id }}
+    ENVIRONMENT_NAME: ${{ inputs.environment_name }}
+    APP_NAME: ${{ inputs.app_name }}
+    COMPONENT_NAME: ${{ inputs.component_name }}
+    VERSION: ${{ inputs.version }}
+    ACCESS_KEY: ${{ inputs.accessKey }}
+    SECRET_KEY: ${{ inputs.secretKey }}
+    REGION: ${{ inputs.region }}
+    EPI: ${{inputs.enterprise_project_id}}
+    SWR_ORG: ${{ inputs.swr_organization }}
+    SWR_REPO: ${{ inputs.swr_repository }}
+    IMAGE_TAG: ${{ inputs.image_tag }}
