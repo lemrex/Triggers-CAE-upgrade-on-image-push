@@ -33,6 +33,7 @@ inputs:
   enterprise_project_id:
     description: "Enterprise Project ID (Optional)."
     required: true
+    default: "0"
   swr_organization:
     description: "SWR Organization."
     required: true

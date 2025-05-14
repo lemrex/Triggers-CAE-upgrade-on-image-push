@@ -8,13 +8,15 @@ This GitHub Action automatically triggers a **Component Upgrade** in **Huawei Cl
 
 ## **Features**
 
-✅ Automatically upgrades CAE components when a new image is pushed
-✅ Authenticates using **Access Key (AK) and Secret Key (SK)**
-✅ Dynamically retrieves **Environment, Application, and Component IDs**
-✅ Parses and uses **image URL and tag** for upgrade
-✅ Supports multiple **Huawei Cloud regions**
+* ✅ Automatically upgrades CAE components when a new image is pushed
+* ✅ Authenticates using **Access Key (AK) and Secret Key (SK)**
+* ✅ Dynamically retrieves **Environment, Application, and Component IDs**
+* ✅ Parses and uses **image URL and tag** for upgrade
+* ✅ Supports multiple **Huawei Cloud regions**
 
 ---
+
+
 
 ## **Usage**
 
