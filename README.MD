@@ -38,7 +38,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Auto Upgrade Component in CAE
-        uses: lemrex/Triggers-CAE-upgrade-on-image-push@v1.0.0
+        uses: lemrex/Triggers-CAE-upgrade-on-image-push@v1.0.1
         with:
           project_id: ${{ secrets.HUAWEI_PROJECT_ID }}
           enterprise_project_id: "0"
